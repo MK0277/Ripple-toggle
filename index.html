@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0b1020">
-  <meta name="description" content="A smooth dark and light theme switcher with a water-ripple transition.">
+  <meta name="description" content="A smooth dark and light theme switcher with five selectable transition animations.">
   <title>Ripple Toggle — Theme Switcher</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,15 +36,39 @@
     <section class="hero">
       <div class="eyebrow"><span class="eyebrow-line"></span> ONE CLICK. A WHOLE NEW FEEL.</div>
       <h1>Let your screen<br>flow with <span>your mood.</span></h1>
-      <p class="hero-copy">A little ripple. A different perspective. Switch between light and dark with a fluid transition inspired by water.</p>
+      <p class="hero-copy">Choose a transition, tap the switch, and watch the whole interface move into a new mood. Five motion styles, one simple toggle.</p>
 
       <div class="hero-actions">
         <button class="primary-button" id="tryToggle" type="button">
-          <span>Try the ripple</span>
+          <span>Preview selected effect</span>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg>
         </button>
         <span class="hint"><kbd>↵</kbd> or tap the switch above</span>
       </div>
+
+      <section class="animation-picker" aria-labelledby="animationHeading">
+        <div class="picker-heading">
+          <div><span class="mini-label">MAKE IT MOVE</span><h2 id="animationHeading">Choose your transition</h2></div>
+          <span class="picker-count">05 MOTION STYLES</span>
+        </div>
+        <div class="animation-options" role="group" aria-label="Theme transition animation">
+          <button class="animation-option is-selected" type="button" data-effect="water" aria-pressed="true">
+            <span class="option-art water-art" aria-hidden="true"><i></i></span><span class="option-name">Water ripple</span><span class="option-note">A fluid reveal</span>
+          </button>
+          <button class="animation-option" type="button" data-effect="cube" aria-pressed="false">
+            <span class="option-art cube-art" aria-hidden="true"><i></i></span><span class="option-name">Solving cube</span><span class="option-note">A rotating cube</span>
+          </button>
+          <button class="animation-option" type="button" data-effect="chess" aria-pressed="false">
+            <span class="option-art chess-art" aria-hidden="true"><i></i></span><span class="option-name">Chessboard</span><span class="option-note">Square by square</span>
+          </button>
+          <button class="animation-option" type="button" data-effect="wind" aria-pressed="false">
+            <span class="option-art wind-art" aria-hidden="true"><i></i></span><span class="option-name">Soft wind</span><span class="option-note">A gentle sweep</span>
+          </button>
+          <button class="animation-option" type="button" data-effect="paper" aria-pressed="false">
+            <span class="option-art paper-art" aria-hidden="true"><i></i></span><span class="option-name">Unfold paper</span><span class="option-note">Crumple to flat</span>
+          </button>
+        </div>
+      </section>
 
       <div class="preview-card">
         <div class="preview-top">
@@ -59,8 +83,8 @@
           <div class="preview-text">
             <span class="mini-label">DESIGNED TO FEEL NATURAL</span>
             <h2>Fluid by nature.</h2>
-            <p>The transition follows your touch, expanding from the point where you click.</p>
-            <div class="preview-meta"><span>01</span><i></i><span>THEME TRANSITION</span></div>
+            <p id="previewDescription">The transition follows your touch, expanding from the point where you click.</p>
+            <div class="preview-meta"><span id="selectedEffectNumber">01</span><i></i><span id="selectedEffectLabel">WATER RIPPLE</span></div>
           </div>
         </div>
       </div>
@@ -68,7 +92,11 @@
   </main>
 
   <footer><span>RIPPLE TOGGLE <span class="footer-separator">/</span> THEME EXPERIMENT</span><span>MADE TO MOVE <span class="footer-heart">✳</span></span></footer>
-  <div class="ripple-layer" id="rippleLayer" aria-hidden="true"></div>
+
+  <div class="transition-layer" id="transitionLayer" aria-hidden="true">
+    <div class="effect-surface"></div><div class="effect-cube"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="effect-grid"></div><div class="effect-wind"></div><div class="effect-paper"></div>
+  </div>
   <noscript><p class="noscript">Please enable JavaScript to use the theme switcher.</p></noscript>
 </body>
 </html>
