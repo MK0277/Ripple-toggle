@@ -247,3 +247,19 @@ footer { max-width: 1180px; margin: 0 auto; padding: 22px 34px 30px; display: fl
 @keyframes rain-world{0%{opacity:0}35%,100%{opacity:1}}
 @media(max-width:700px){.animation-options{grid-template-columns:repeat(2,minmax(0,1fr))}.animation-option:last-child{grid-column:auto}.effect-tree svg{width:92vw;height:72vh}.effect-clouds span{width:72vw;height:15vh}.effect-clouds span:nth-child(2){width:78vw}.effect-clouds span:nth-child(3){width:66vw}}
 @media(prefers-reduced-motion:reduce){.transition-layer.is-running .effect-surface,.transition-layer.is-running .effect-cube,.transition-layer.is-running .effect-grid,.transition-layer.is-running .effect-wind,.transition-layer.is-running .effect-paper,.transition-layer.is-running .effect-tree,.transition-layer.is-running .effect-clouds,.transition-layer.is-running .tree-trunk,.transition-layer.is-running .tree-branch,.transition-layer.is-running .tree-leaves,.transition-layer.is-running .rainfall{animation-duration:.01ms!important;animation-delay:0ms!important}}
+
+
+/* Keep the two new scenes dormant until their own effect is selected. */
+.effect-tree,.effect-clouds{opacity:0}
+.transition-layer[data-effect="tree"] .effect-tree{opacity:1}
+.transition-layer[data-effect="rain"] .effect-clouds{opacity:1}
+.tree-trunk,.tree-branch{animation:none}
+.tree-leaves{animation:none}
+.transition-layer[data-effect="tree"] .tree-trunk{animation:tree-draw 1.25s ease-out both}
+.transition-layer[data-effect="tree"] .tree-branch{animation:tree-draw 1.25s ease-out .22s both}
+.transition-layer[data-effect="tree"] .tree-leaves{animation:tree-bloom .75s cubic-bezier(.2,.8,.2,1) 1s both}
+.effect-clouds span,.rainfall{animation:none}
+.transition-layer[data-effect="rain"] .effect-clouds span:nth-child(1){animation:cloud-drop 1.55s cubic-bezier(.2,.7,.2,1) both}
+.transition-layer[data-effect="rain"] .effect-clouds span:nth-child(2){animation:cloud-drop 1.7s cubic-bezier(.2,.7,.2,1) 120ms both}
+.transition-layer[data-effect="rain"] .effect-clouds span:nth-child(3){animation:cloud-drop 1.8s cubic-bezier(.2,.7,.2,1) 240ms both}
+.transition-layer[data-effect="rain"] .rainfall{animation:rain-fall 1.25s linear 550ms both}
