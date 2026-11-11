@@ -17,7 +17,7 @@
     wind: { name: "SOFT WIND", number: "04", description: "Layered, flowing gusts sweep across the page like silk in a breeze.", duration: 1550 },
     paper: { name: "UNFOLD PAPER", number: "05", description: "A sheet visibly crumples, forms creases, then unfolds and smooths flat.", duration: 2050 },
     tree: { name: "GROWING TREE", number: "06", description: "A tree grows from the bottom of the screen, branches stretch out, and its canopy blooms as the theme changes.", duration: 2850 },
-    rain: { name: "CLOUD & RAIN", number: "07", description: "Clouds roll in from above, rain sweeps down, and the sky clears into the new theme.", duration: 2500 }
+    rain: { name: "CLOUD & RAIN", number: "07", description: "Clouds roll in from above, rain sweeps down, and the sky clears into the new theme.", duration: 2900 }
   };
   let selectedEffect = "water";
   let isAnimating = false;
