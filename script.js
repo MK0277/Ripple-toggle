@@ -15,7 +15,7 @@
     cube: { name: "SOLVING CUBE", number: "02", description: "A dimensional cube turns through space while the new colour palette comes into view.", duration: 1100 },
     chess: { name: "CHESSBOARD", number: "03", description: "A clean checkerboard pattern sweeps across the screen, revealing the next theme.", duration: 1000 },
     wind: { name: "SOFT WIND", number: "04", description: "A soft, sweeping gust glides across the page and carries the new theme with it.", duration: 1050 },
-    paper: { name: "UNFOLD PAPER", number: "05", description: "A folded paper-like surface relaxes, unfolds, and opens into a perfectly flat view.", duration: 1150 }
+    paper: { name: "UNFOLD PAPER", number: "05", description: "A folded paper-like surface relaxes, unfolds, and opens into a perfectly flat view.", duration: 1400 }
   };
   let selectedEffect = "water";
   let isAnimating = false;
@@ -88,13 +88,7 @@
       isAnimating = false;
     };
     animationTimer = window.setTimeout(finish, effects[selectedEffect].duration);
-    layer.addEventListener("animationend", (event) => {
-      if (event.target === event.currentTarget.querySelector(".effect-surface") ||
-          event.target === event.currentTarget.querySelector(".effect-cube") ||
-          event.target === event.currentTarget.querySelector(".effect-grid") ||
-          event.target === event.currentTarget.querySelector(".effect-wind") ||
-          event.target === event.currentTarget.querySelector(".effect-paper")) finish();
-    }, { once: true });
+
   }
 
   options.forEach((button) => button.addEventListener("click", () => {
