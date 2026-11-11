@@ -36,7 +36,7 @@
     <section class="hero">
       <div class="eyebrow"><span class="eyebrow-line"></span> ONE CLICK. A WHOLE NEW FEEL.</div>
       <h1>Let your screen<br>flow with <span>your mood.</span></h1>
-      <p class="hero-copy">Choose a transition, tap the switch, and watch the whole interface move into a new mood. Five motion styles, one simple toggle.</p>
+      <p class="hero-copy">Choose a transition, tap the switch, and watch the whole interface move into a new mood. Seven motion styles, one simple toggle.</p>
 
       <div class="hero-actions">
         <button class="primary-button" id="tryToggle" type="button">
@@ -49,7 +49,7 @@
       <section class="animation-picker" aria-labelledby="animationHeading">
         <div class="picker-heading">
           <div><span class="mini-label">MAKE IT MOVE</span><h2 id="animationHeading">Choose your transition</h2></div>
-          <span class="picker-count">05 MOTION STYLES</span>
+          <span class="picker-count">07 MOTION STYLES</span>
         </div>
         <div class="animation-options" role="group" aria-label="Theme transition animation">
           <button class="animation-option is-selected" type="button" data-effect="water" aria-pressed="true">
@@ -67,6 +67,8 @@
           <button class="animation-option" type="button" data-effect="paper" aria-pressed="false">
             <span class="option-art paper-art" aria-hidden="true"><i></i></span><span class="option-name">Unfold paper</span><span class="option-note">Crumple to flat</span>
           </button>
+          <button class="animation-option" type="button" data-effect="tree" aria-pressed="false"><span class="option-art tree-art" aria-hidden="true"><i></i></span><span class="option-name">Growing tree</span><span class="option-note">A scene comes alive</span></button>
+          <button class="animation-option" type="button" data-effect="rain" aria-pressed="false"><span class="option-art rain-art" aria-hidden="true"><i></i></span><span class="option-name">Cloud & rain</span><span class="option-note">A rainy reveal</span></button>
         </div>
       </section>
 
@@ -95,7 +97,12 @@
 
   <div class="transition-layer" id="transitionLayer" aria-hidden="true">
     <div class="effect-surface"></div><div class="effect-cube"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-    <div class="effect-grid"></div><div class="effect-wind"></div><div class="effect-paper"></div>
+    <div class="effect-grid"></div><div class="effect-wind"><i></i><i></i><i></i></div><div class="effect-paper"></div>
+    <div class="effect-tree" aria-hidden="true"><svg viewBox="0 0 400 600" role="presentation">
+      <path class="tree-trunk" d="M200 590 C195 510 215 445 198 370 C188 320 205 260 200 205"/>
+      <path class="tree-branch" d="M198 430 C155 390 120 355 90 300 M202 390 C245 355 275 315 300 260 M199 325 C160 285 145 245 135 205 M201 285 C235 245 250 210 260 165 M200 235 C180 195 180 160 180 125"/>
+      <g class="tree-leaves"><circle cx="90" cy="292" r="35"/><circle cx="122" cy="250" r="40"/><circle cx="150" cy="300" r="38"/><circle cx="300" cy="252" r="39"/><circle cx="270" cy="205" r="43"/><circle cx="245" cy="275" r="36"/><circle cx="135" cy="190" r="39"/><circle cx="178" cy="150" r="42"/><circle cx="220" cy="178" r="39"/><circle cx="260" cy="140" r="34"/><circle cx="200" cy="92" r="42"/><circle cx="160" cy="110" r="32"/></g>
+    </svg></div><div class="effect-clouds" aria-hidden="true"><span></span><span></span><span></span><div class="rainfall"></div></div>
   </div>
   <noscript><p class="noscript">Please enable JavaScript to use the theme switcher.</p></noscript>
 </body>
