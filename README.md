@@ -1,31 +1,34 @@
-# Ripple Toggle
+# Ripple Toggle — Theme Switcher
 
-A responsive dark/light theme switcher featuring a water-inspired circular reveal animation.
+A responsive dark/light theme switcher with five selectable animated transitions.
 
 ## Features
 
-- Dark and light themes with a smooth ripple reveal from the click position.
-- Remembers the selected theme with `localStorage`.
-- Accessible toggle button with changing labels and `aria-pressed` state.
-- Responsive layout for mobile and desktop.
-- Respects the user's reduced-motion preference.
-- No frameworks or build tools required.
-
-## Run locally
-
-1. Clone or download this repository.
-2. Open `index.html` in a browser.
-3. Click the theme switch in the top-right corner or **Try the ripple** button.
+- Dark and light themes with saved preference.
+- Five transition styles: water ripple, solving cube, chessboard, soft wind, and unfolding paper.
+- Choose an animation independently from the theme toggle.
+- Selected theme and animation preferences are saved in the browser.
+- Responsive layout, keyboard support, and reduced-motion accessibility.
+- Works in both directions: dark to light and light to dark.
 
 ## Files
 
-- `index.html` — page structure and controls.
-- `style.css` — theme tokens, responsive styles and ripple animation.
-- `script.js` — theme persistence and interaction logic.
+- `index.html` — page structure and animation selector.
+- `style.css` — themes, responsive layout, and transition keyframes.
+- `script.js` — theme state, saved preferences, and animation controls.
 
-## GitHub Pages
+## Run locally
 
-This is a static website. In the repository, open **Settings → Pages**, select **Deploy from a branch**, choose **main** and **/(root)**, then save. GitHub Pages will publish the site.
+Open `index.html` in a modern browser. No build step or dependencies are required.
 
----
-Made with care • Ripple Toggle
+## Publish with GitHub Pages
+
+1. Open the repository's **Settings** tab.
+2. Select **Pages** from the sidebar.
+3. Under **Build and deployment**, choose **Deploy from a branch**.
+4. Select branch `main` and folder `/(root)`, then save.
+5. Wait for GitHub Pages to publish the site and open the URL shown in the Pages section.
+
+## Accessibility
+
+The interface respects the operating system's reduced-motion preference and switches themes without large motion when reduced motion is enabled.
