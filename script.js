@@ -12,10 +12,12 @@
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const effects = {
     water: { name: "WATER RIPPLE", number: "01", description: "A fluid circle expands from your click and gently settles into the new theme.", duration: 920 },
-    cube: { name: "SOLVING CUBE", number: "02", description: "A dimensional cube turns through space while the new colour palette comes into view.", duration: 1100 },
+    cube: { name: "SOLVING CUBE", number: "02", description: "A dimensional, tiled cube rotates through space and settles as the new palette appears.", duration: 1450 },
     chess: { name: "CHESSBOARD", number: "03", description: "A clean checkerboard pattern sweeps across the screen, revealing the next theme.", duration: 1000 },
-    wind: { name: "SOFT WIND", number: "04", description: "A soft, sweeping gust glides across the page and carries the new theme with it.", duration: 1050 },
-    paper: { name: "UNFOLD PAPER", number: "05", description: "A folded paper-like surface relaxes, unfolds, and opens into a perfectly flat view.", duration: 1400 }
+    wind: { name: "SOFT WIND", number: "04", description: "Layered, flowing gusts sweep across the page like silk in a breeze.", duration: 1550 },
+    paper: { name: "UNFOLD PAPER", number: "05", description: "A sheet visibly crumples, forms creases, then unfolds and smooths flat.", duration: 2050 },
+    tree: { name: "GROWING TREE", number: "06", description: "A tree grows from the bottom of the screen, branches stretch out, and its canopy blooms as the theme changes.", duration: 2850 },
+    rain: { name: "CLOUD & RAIN", number: "07", description: "Clouds roll in from above, rain sweeps down, and the sky clears into the new theme.", duration: 2500 }
   };
   let selectedEffect = "water";
   let isAnimating = false;
